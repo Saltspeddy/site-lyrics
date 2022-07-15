@@ -49,8 +49,6 @@ button{
     min-width: 30%;
     max-width: 20%;
     border-radius: 0px 10px 10px 0px;
-    overflow: hidden;
-    outline: none;
     border: none;
     font-size: clamp(0.75rem, 2vw, 2rem); 
 }

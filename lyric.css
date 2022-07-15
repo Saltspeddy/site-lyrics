@@ -22,18 +22,23 @@ body{
     font-family: 'Outfit', sans-serif;
 }
 
+
+
 .container{
     /* background-color: aqua; */
     padding: 20px;
-    width: 70%;
+    width: 50%;
     margin:  auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px auto;
+    grid-template-rows: 120px 240px auto;
     grid-template-areas: 
     'title'
+    'name'
     'lyrics';
 }
+
+
 
 .title{
     font-size: 1.5em;
@@ -43,7 +48,76 @@ body{
     text-decoration: none;
 }
 
+.name{
+    border-radius: 10px;
+    
+    margin: 30px 0px;
+    grid-area: name;
+    background-color: #2C363F;
+    display: grid;
+    grid-template-columns: auto 180px;
+    grid-template-areas: 
+    'info cover';
+}
+.info{
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+.cover{
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        /* background-color: aqua; */
+        padding: 20px;
+        width: 50%;
+        margin:  auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px 150px auto;
+        grid-template-areas: 
+        'title'
+        'name'
+        'lyrics';
+    }
+    .info{
+        line-height: 2px;
+        font-size: 8px;
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;
+    }
+    .info > p{
+        font-size: 10px;
+    }
+    
+    .name{
+        border-radius: 10px;
+        
+        margin: 30px 0px;
+        grid-area: name;
+        background-color: #2C363F;
+        display: grid;
+        grid-template-columns: auto 80px;
+        grid-template-areas: 
+        'info cover';
+    }
+}
+
 .lyrics{
+    text-align: center;
     color: aliceblue;
     /* line-height: 5px; */
     border-radius: 10px;
